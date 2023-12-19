@@ -1,0 +1,9 @@
+Generic single-database configuration.
+
+WARNING !!!
+This PostgreSQL already has a role type in the database,
+but in any other database this type must be created:
+->
+op.execute("CREATE TYPE role as Enum('admin', 'moderator', 'user')")
+<-
+op.execute("DROP TYPE role")
